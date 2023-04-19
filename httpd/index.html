@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Brewery</h1>
+    <h3>Current Temperature: <span id="currentTemp"></span>°C</h3>
+    <h3>Current Humidity: <span id="currentHum"></span>%</h3>
+    <h3>Start Time: <span id="startTime"></span></h3>
+    <h3>Bias: <span id="bias"></span>%</h3>
+    <input type="number" name="biasInp" id="biasInp" min="0" max="100" step="0.01"/>
+    <button id="biasBtn">Change Bias</button>
+    <button type="reset" id="rstBtn">Reset</button>
+    <div style="width: 800px;">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

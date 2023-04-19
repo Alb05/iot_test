@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    image: ${DOCKER_REGISTRY-}mosquitto
+    build:
+      context: .
+      dockerfile: mosquitto/Dockerfile
+    restart: always
+
+  nodered:
+    image: ${DOCKER_REGISTRY-}nodered
+    build:
+      context: .
+      dockerfile: nodered/Dockerfile
+    depends_on:
+      - mosquitto
+    restart: always
+
+  nginx:
+    image: ${DOCKER_REGISTRY-}nginx
+    build:
+      context: .
+      dockerfile: httpd/Dockerfile
+    depends_on:
+      - mosquitto
+      - nodered
+    restart: always

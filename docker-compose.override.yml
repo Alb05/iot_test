@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    ports:
+      - "1883:1883"
+      - "8081:8081"
+    networks:
+      - iot_net
+    volumes:
+      - mosquitto_config:/mosquitto/config
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+
+  nodered:
+    ports:
+      - "1880:1880"
+    group_add:
+      - dialout
+    devices:
+      - "/dev/ttyS0:/dev/ttyS0"
+    networks:
+      - iot_net
+    volumes:
+      - nodered_data:/data
+
+  nginx:
+    ports:
+      - "80:80"
+    networks:
+      - iot_net
+
+networks:
+  iot_net:
+
+volumes:
+  mosquitto_config:
+    external: false
+  mosquitto_data:
+    external: false
+  mosquitto_log:
+    external: false
+  nodered_data:
+    external: false
