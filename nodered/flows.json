@@ -118,7 +118,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 940,
+        "y": 1000,
         "wires": []
     },
     {
@@ -135,7 +135,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 940,
+        "y": 1000,
         "wires": [
             [
                 "0d59f88116c1b87b"
@@ -454,7 +454,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 1000,
+        "y": 1060,
         "wires": []
     },
     {
@@ -471,7 +471,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 210,
-        "y": 1000,
+        "y": 1060,
         "wires": [
             [
                 "a1d1d3cecd265940"
@@ -492,7 +492,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 1060,
+        "y": 1120,
         "wires": []
     },
     {
@@ -509,7 +509,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 1060,
+        "y": 1120,
         "wires": [
             [
                 "0a3709ad4f9bbf75"
@@ -530,7 +530,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 1120,
+        "y": 1180,
         "wires": []
     },
     {
@@ -547,7 +547,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 1120,
+        "y": 1180,
         "wires": [
             [
                 "2c711c116a5526b1"
@@ -617,7 +617,7 @@
         "to": "",
         "reg": false,
         "x": 620,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "fac540d1d6f721bc"
@@ -645,7 +645,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "bc9f77c1ae6594b0"
@@ -657,11 +657,11 @@
         "type": "http in",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "url": "/brewery/bias",
+        "url": "/brewery/api//bias",
         "method": "put",
         "upload": false,
         "swaggerDoc": "",
-        "x": 190,
+        "x": 180,
         "y": 380,
         "wires": [
             [
@@ -691,7 +691,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "8912cdd42c6e0415"
@@ -703,12 +703,12 @@
         "type": "http in",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "url": "/brewery/reset",
+        "url": "/brewery/api/reset",
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 500,
+        "x": 170,
+        "y": 560,
         "wires": [
             [
                 "8912cdd42c6e0415"
@@ -764,37 +764,10 @@
         "to": "",
         "reg": false,
         "x": 1020,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "adf317ea1aad943d"
-            ]
-        ]
-    },
-    {
-        "id": "bc811a85aa6dd9e9",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.bias",
-                "pt": "msg",
-                "to": "filtBias",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 440,
-        "wires": [
-            [
-                "d756480d0ee9f97e"
             ]
         ]
     },
@@ -819,37 +792,10 @@
         "to": "",
         "reg": false,
         "x": 410,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "9490589cbe9cf072"
-            ]
-        ]
-    },
-    {
-        "id": "16219eeceaef0908",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.startTime",
-                "pt": "msg",
-                "to": "startTime",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 440,
-        "wires": [
-            [
-                "bc811a85aa6dd9e9"
             ]
         ]
     },
@@ -880,7 +826,7 @@
         "to": "",
         "reg": false,
         "x": 1520,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "14cd61cfb6d79753"
@@ -899,7 +845,7 @@
         "template": "{ \"startTime\": null, \"bias\": null }",
         "output": "json",
         "x": 1340,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "81a6cfb8fa2fd895"
@@ -922,27 +868,10 @@
         "repair": false,
         "outputs": 1,
         "x": 1190,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "f9e91f3eae199b60"
-            ]
-        ]
-    },
-    {
-        "id": "9bec478a74b4d994",
-        "type": "http in",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "url": "/brewery/info",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 190,
-        "y": 440,
-        "wires": [
-            [
-                "16219eeceaef0908"
             ]
         ]
     },
@@ -1179,7 +1108,7 @@
             "20723e39c52264fb"
         ],
         "x": 265,
-        "y": 820,
+        "y": 880,
         "wires": [
             [
                 "264b7b2b3f35bedd"
@@ -1209,7 +1138,7 @@
         "repair": false,
         "outputs": 2,
         "x": 370,
-        "y": 820,
+        "y": 880,
         "wires": [
             [
                 "7c7e51b2efee03bd"
@@ -1239,7 +1168,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 780,
+        "y": 840,
         "wires": [
             [
                 "d57d68227bf3ebdf"
@@ -1266,7 +1195,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "d57d68227bf3ebdf"
@@ -1285,7 +1214,7 @@
         "overwriteFile": "false",
         "encoding": "utf8",
         "x": 920,
-        "y": 820,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1306,7 +1235,7 @@
         "include_empty_strings": "",
         "include_null_values": "",
         "x": 770,
-        "y": 820,
+        "y": 880,
         "wires": [
             [
                 "c9eb520a85707ba7"
@@ -1326,7 +1255,7 @@
         "encoding": "utf8",
         "allProps": false,
         "x": 400,
-        "y": 640,
+        "y": 700,
         "wires": [
             [
                 "b96a3629a4a7da8a"
@@ -1338,12 +1267,12 @@
         "type": "http in",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "url": "/brewery/hum/log",
+        "url": "/brewery/api/hum/log",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 640,
+        "x": 170,
+        "y": 700,
         "wires": [
             [
                 "ee0d7783fc96746b"
@@ -1366,7 +1295,7 @@
         "include_empty_strings": "",
         "include_null_values": "",
         "x": 570,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "f22ba75e222e09f7"
@@ -1383,7 +1312,7 @@
             "Content-Type": "application/json"
         },
         "x": 370,
-        "y": 700,
+        "y": 760,
         "wires": []
     },
     {
@@ -1399,7 +1328,7 @@
         "encoding": "utf8",
         "allProps": false,
         "x": 400,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "b96a3629a4a7da8a"
@@ -1411,12 +1340,12 @@
         "type": "http in",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "url": "/brewery/temp/log",
+        "url": "/brewery/api/temp/log",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 600,
+        "x": 170,
+        "y": 660,
         "wires": [
             [
                 "b1f7cff2ddf1ea3e"
@@ -1432,10 +1361,12 @@
             "14cd61cfb6d79753",
             "5779312181c79d23",
             "d756480d0ee9f97e",
-            "f22ba75e222e09f7"
+            "f22ba75e222e09f7",
+            "9db7fa490cfc0d36",
+            "7fa52a580306130a"
         ],
         "x": 265,
-        "y": 700,
+        "y": 760,
         "wires": [
             [
                 "abcc656fc800d2ea"
@@ -1456,19 +1387,6 @@
         "wires": []
     },
     {
-        "id": "d756480d0ee9f97e",
-        "type": "link out",
-        "z": "f6f2187d.f17ca8",
-        "name": "link out 7",
-        "mode": "link",
-        "links": [
-            "4fe56f2dbb263093"
-        ],
-        "x": 855,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "14cd61cfb6d79753",
         "type": "link out",
         "z": "f6f2187d.f17ca8",
@@ -1478,7 +1396,7 @@
             "4fe56f2dbb263093"
         ],
         "x": 1655,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -1491,7 +1409,121 @@
             "4fe56f2dbb263093"
         ],
         "x": 675,
-        "y": 620,
+        "y": 680,
         "wires": []
+    },
+    {
+        "id": "3703728d07db4870",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "startTime",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "9db7fa490cfc0d36"
+            ]
+        ]
+    },
+    {
+        "id": "bbee73720663df2d",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/brewery/api//starttime",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "3703728d07db4870"
+            ]
+        ]
+    },
+    {
+        "id": "9db7fa490cfc0d36",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "4fe56f2dbb263093"
+        ],
+        "x": 535,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6d8dd7faba36abbe",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/brewery/api/bias",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "1f1a618768aa62b6"
+            ]
+        ]
+    },
+    {
+        "id": "7fa52a580306130a",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "4fe56f2dbb263093"
+        ],
+        "x": 535,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1f1a618768aa62b6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filtBias",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [
+                "7fa52a580306130a"
+            ]
+        ]
     }
 ]
