@@ -7,85 +7,10 @@
         "info": ""
     },
     {
-        "id": "2fbf5ea9d03ff659",
-        "type": "tab",
-        "label": "Colors",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "faa22b72fed98f13",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "mosquitto",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "dd8ec9598f92cccf",
-        "type": "websocket-client",
-        "path": "ws://mosquitto:8081",
-        "tls": "",
-        "wholemsg": "false",
-        "hb": "0",
-        "subprotocol": "mqtt"
-    },
-    {
-        "id": "3e94f4872ebac307",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "ws://mosquitto:8081/mqtt",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "42b6db52678f423c",
-        "type": "arduino-board",
-        "device": "/dev/ttyACM0"
-    },
-    {
         "id": "9fd4442ecef27944",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
+        "d": true,
         "name": "temp",
         "props": [
             {
@@ -153,6 +78,7 @@
         "id": "4d57ec9fd6093b29",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
+        "d": true,
         "name": "hum",
         "props": [
             {
@@ -1571,98 +1497,57 @@
         ]
     },
     {
-        "id": "9f7d95eb776f468c",
-        "type": "buffer-maker",
-        "z": "2fbf5ea9d03ff659",
+        "id": "3e94f4872ebac307",
+        "type": "mqtt-broker",
         "name": "",
-        "specification": "spec",
-        "specificationType": "ui",
-        "items": [
-            {
-                "name": "red",
-                "type": "uint8",
-                "length": 1,
-                "dataType": "msg",
-                "data": "payload.red"
-            },
-            {
-                "name": "green",
-                "type": "uint8",
-                "length": 1,
-                "dataType": "msg",
-                "data": "payload.green"
-            },
-            {
-                "name": "blue",
-                "type": "uint8",
-                "length": 1,
-                "dataType": "msg",
-                "data": "payload.blue"
-            }
-        ],
-        "swap1": "",
-        "swap2": "",
-        "swap3": "",
-        "swap1Type": "swap",
-        "swap2Type": "swap",
-        "swap3Type": "swap",
-        "msgProperty": "payload",
-        "msgPropertyType": "str",
-        "x": 470,
-        "y": 180,
-        "wires": [
-            [
-                "d8a01c8842c3374c"
-            ]
-        ]
-    },
-    {
-        "id": "d8a01c8842c3374c",
-        "type": "mqtt out",
-        "z": "2fbf5ea9d03ff659",
-        "name": "",
-        "topic": "test/send",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
+        "broker": "ws://mosquitto:8081/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
         "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "faa22b72fed98f13",
-        "x": 640,
-        "y": 180,
-        "wires": []
+        "sessionExpiry": ""
     },
     {
-        "id": "437a6bf53cf77854",
-        "type": "http in",
-        "z": "2fbf5ea9d03ff659",
+        "id": "faa22b72fed98f13",
+        "type": "mqtt-broker",
         "name": "",
-        "url": "/colors/api/set",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 270,
-        "y": 140,
-        "wires": [
-            [
-                "9f7d95eb776f468c",
-                "07dd2d3c0c064a03"
-            ]
-        ]
-    },
-    {
-        "id": "07dd2d3c0c064a03",
-        "type": "http response",
-        "z": "2fbf5ea9d03ff659",
-        "name": "",
-        "statusCode": "",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "x": 450,
-        "y": 140,
-        "wires": []
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     }
 ]
