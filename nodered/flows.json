@@ -7,6 +7,14 @@
         "info": ""
     },
     {
+        "id": "2fbf5ea9d03ff659",
+        "type": "tab",
+        "label": "Colors",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "faa22b72fed98f13",
         "type": "mqtt-broker",
         "name": "",
@@ -78,7 +86,6 @@
         "id": "9fd4442ecef27944",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
-        "d": true,
         "name": "temp",
         "props": [
             {
@@ -100,7 +107,7 @@
         "y": 60,
         "wires": [
             [
-                "fb291571c895ce5a"
+                "fbb711915323e4b6"
             ]
         ]
     },
@@ -146,7 +153,6 @@
         "id": "4d57ec9fd6093b29",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
-        "d": true,
         "name": "hum",
         "props": [
             {
@@ -168,7 +174,7 @@
         "y": 100,
         "wires": [
             [
-                "fb291571c895ce5a"
+                "fbb711915323e4b6"
             ]
         ]
     },
@@ -191,7 +197,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
+        "x": 1580,
         "y": 180,
         "wires": [
             [
@@ -210,7 +216,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
+        "x": 1790,
         "y": 220,
         "wires": [
             [
@@ -238,7 +244,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
+        "x": 2120,
         "y": 180,
         "wires": [
             [
@@ -260,7 +266,7 @@
         "correl": "",
         "expiry": "",
         "broker": "faa22b72fed98f13",
-        "x": 2090,
+        "x": 2310,
         "y": 220,
         "wires": []
     },
@@ -283,7 +289,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
+        "x": 1580,
         "y": 260,
         "wires": [
             [
@@ -313,7 +319,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1710,
+        "x": 1930,
         "y": 220,
         "wires": [
             [
@@ -344,7 +350,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
+        "x": 2120,
         "y": 260,
         "wires": [
             [
@@ -370,7 +376,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
+        "x": 1370,
         "y": 280,
         "wires": [
             [
@@ -399,7 +405,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
+        "x": 1370,
         "y": 200,
         "wires": [
             [
@@ -432,7 +438,7 @@
             "0ae1e96b229b31ab",
             "962d68d901d33627"
         ],
-        "x": 1965,
+        "x": 2185,
         "y": 220,
         "wires": [
             [
@@ -567,7 +573,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
+        "x": 210,
         "y": 200,
         "wires": [
             [
@@ -588,7 +594,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
+        "x": 210,
         "y": 280,
         "wires": [
             [
@@ -947,33 +953,6 @@
         ]
     },
     {
-        "id": "57aedfeb7e4a986b",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "filtTemp",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 200,
-        "wires": [
-            [
-                "e8d339f105339805"
-            ]
-        ]
-    },
-    {
         "id": "7988341e303ade04",
         "type": "change",
         "z": "f6f2187d.f17ca8",
@@ -992,11 +971,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 370,
         "y": 280,
         "wires": [
             [
-                "e8d339f105339805"
+                "701a976d5592ce7c"
             ]
         ]
     },
@@ -1009,7 +988,7 @@
         "links": [
             "31801599285c45fa"
         ],
-        "x": 1275,
+        "x": 1495,
         "y": 300,
         "wires": []
     },
@@ -1022,7 +1001,7 @@
         "links": [
             "89556a798a98df1b"
         ],
-        "x": 1275,
+        "x": 1495,
         "y": 220,
         "wires": []
     },
@@ -1034,7 +1013,7 @@
         "links": [
             "ca4d75a0c9011155"
         ],
-        "x": 1745,
+        "x": 1965,
         "y": 180,
         "wires": [
             [
@@ -1050,31 +1029,11 @@
         "links": [
             "ce640c5bf9b1db2a"
         ],
-        "x": 1745,
+        "x": 1965,
         "y": 260,
         "wires": [
             [
                 "51abfa946bf3b061"
-            ]
-        ]
-    },
-    {
-        "id": "e8d339f105339805",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "bytesToFloat",
-        "func": "const data = msg.payload;\nconst buf = new ArrayBuffer(data.length);\nconst view = new DataView(buf);\n\ndata.forEach(function(b, i) {\n    view.setUint8(i, b);\n});\n\nconst num = view.getFloat32(0, true);\nmsg.payload = { timestamp: Date.now(), value: num };\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 240,
-        "wires": [
-            [
-                "c04b8c015316e31d",
-                "20723e39c52264fb"
             ]
         ]
     },
@@ -1100,7 +1059,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 990,
+        "x": 1210,
         "y": 240,
         "wires": [
             [
@@ -1119,6 +1078,13 @@
         "rules": [
             {
                 "t": "set",
+                "p": "payload.timestamp",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            },
+            {
+                "t": "set",
                 "p": "payload.bias",
                 "pt": "msg",
                 "to": "filtBias",
@@ -1130,30 +1096,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
+        "x": 1040,
         "y": 240,
         "wires": [
             [
                 "5d74c68f90b3b938"
-            ]
-        ]
-    },
-    {
-        "id": "fb291571c895ce5a",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "floatToBytes",
-        "func": "const farr = new Float32Array(1);\nfarr[0] = parseFloat(msg.payload);\nconst barr = new Uint8Array(farr.buffer);\nmsg.payload = Buffer.from(barr.buffer);\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "962d68d901d33627"
             ]
         ]
     },
@@ -1166,7 +1113,7 @@
         "links": [
             "b264c9414d75c3c4"
         ],
-        "x": 715,
+        "x": 975,
         "y": 280,
         "wires": []
     },
@@ -1492,6 +1439,230 @@
         ],
         "x": 675,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "fbb711915323e4b6",
+        "type": "buffer-maker",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "name": "item1",
+                "type": "floatle",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload"
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "962d68d901d33627"
+            ]
+        ]
+    },
+    {
+        "id": "57aedfeb7e4a986b",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "filtTemp",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "701a976d5592ce7c"
+            ]
+        ]
+    },
+    {
+        "id": "701a976d5592ce7c",
+        "type": "buffer-parser",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "floatle",
+                "name": "item1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload.value",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "7173e0a2930f854d"
+            ]
+        ]
+    },
+    {
+        "id": "7173e0a2930f854d",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.timestamp",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "c04b8c015316e31d",
+                "20723e39c52264fb"
+            ]
+        ]
+    },
+    {
+        "id": "9f7d95eb776f468c",
+        "type": "buffer-maker",
+        "z": "2fbf5ea9d03ff659",
+        "name": "",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "name": "red",
+                "type": "uint8",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload.red"
+            },
+            {
+                "name": "green",
+                "type": "uint8",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload.green"
+            },
+            {
+                "name": "blue",
+                "type": "uint8",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload.blue"
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "d8a01c8842c3374c"
+            ]
+        ]
+    },
+    {
+        "id": "d8a01c8842c3374c",
+        "type": "mqtt out",
+        "z": "2fbf5ea9d03ff659",
+        "name": "",
+        "topic": "test/send",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "faa22b72fed98f13",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "437a6bf53cf77854",
+        "type": "http in",
+        "z": "2fbf5ea9d03ff659",
+        "name": "",
+        "url": "/colors/api/set",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "9f7d95eb776f468c",
+                "07dd2d3c0c064a03"
+            ]
+        ]
+    },
+    {
+        "id": "07dd2d3c0c064a03",
+        "type": "http response",
+        "z": "2fbf5ea9d03ff659",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "x": 450,
+        "y": 140,
         "wires": []
     }
 ]
