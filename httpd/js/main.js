@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   const serverIp = window.location.hostname;
   const baseUri = `http://${serverIp}:1880/brewery`;
   const ctx = document.getElementById('myChart');
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     fetch(`${baseUri}/bias`, {
       method: 'PUT',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ bias: (biasInp.value / 100.0) }),
     })
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       setBias(data.bias);
     })
     .catch((error) => {
-      console.error("Error:", error);
+      console.error('Error:', error);
     });
   });
 
@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       resetChart();
     })
     .catch((error) => {
-      console.error("Error:", error);
+      console.error('Error:', error);
     });
   });
 
@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  const clientId = `mqttjs_${Math.random().toString(16).substr(2, 8)}`;
+  const clientId = `mqttjs_${Math.random().toString(16).substring(2, 10)}`;
   const host = `ws://${serverIp}:8081`;
 
   const options = {

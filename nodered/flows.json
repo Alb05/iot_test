@@ -7,10 +7,71 @@
         "info": ""
     },
     {
+        "id": "667217b87d157241",
+        "type": "tab",
+        "label": "Tende",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3e94f4872ebac307",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ws://mosquitto:8081/mqtt",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "faa22b72fed98f13",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "9fd4442ecef27944",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
-        "d": true,
         "name": "temp",
         "props": [
             {
@@ -78,7 +139,6 @@
         "id": "4d57ec9fd6093b29",
         "type": "inject",
         "z": "f6f2187d.f17ca8",
-        "d": true,
         "name": "hum",
         "props": [
             {
@@ -123,8 +183,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
-        "y": 180,
+        "x": 1560,
+        "y": 160,
         "wires": [
             [
                 "9b3272cd4a9ace6a"
@@ -142,8 +202,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1790,
-        "y": 220,
+        "x": 1770,
+        "y": 200,
         "wires": [
             [
                 "7c7b7f0c55250aca"
@@ -170,8 +230,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2120,
-        "y": 180,
+        "x": 2100,
+        "y": 160,
         "wires": [
             [
                 "f647b9f2ecbb6efe"
@@ -192,8 +252,8 @@
         "correl": "",
         "expiry": "",
         "broker": "faa22b72fed98f13",
-        "x": 2310,
-        "y": 220,
+        "x": 2290,
+        "y": 200,
         "wires": []
     },
     {
@@ -215,8 +275,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
-        "y": 260,
+        "x": 1560,
+        "y": 240,
         "wires": [
             [
                 "9b3272cd4a9ace6a"
@@ -245,8 +305,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1930,
-        "y": 220,
+        "x": 1910,
+        "y": 200,
         "wires": [
             [
                 "205f206330e157cd"
@@ -276,8 +336,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2120,
-        "y": 260,
+        "x": 2100,
+        "y": 240,
         "wires": [
             [
                 "f647b9f2ecbb6efe"
@@ -303,7 +363,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1370,
-        "y": 280,
+        "y": 260,
         "wires": [
             [
                 "f462e8e320312f57"
@@ -332,7 +392,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1370,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "bdbafe4d99f362d2"
@@ -364,8 +424,8 @@
             "0ae1e96b229b31ab",
             "962d68d901d33627"
         ],
-        "x": 2185,
-        "y": 220,
+        "x": 2165,
+        "y": 200,
         "wires": [
             [
                 "f647b9f2ecbb6efe"
@@ -914,8 +974,8 @@
         "links": [
             "31801599285c45fa"
         ],
-        "x": 1495,
-        "y": 300,
+        "x": 1475,
+        "y": 280,
         "wires": []
     },
     {
@@ -927,8 +987,8 @@
         "links": [
             "89556a798a98df1b"
         ],
-        "x": 1495,
-        "y": 220,
+        "x": 1475,
+        "y": 200,
         "wires": []
     },
     {
@@ -939,8 +999,8 @@
         "links": [
             "ca4d75a0c9011155"
         ],
-        "x": 1965,
-        "y": 180,
+        "x": 1945,
+        "y": 160,
         "wires": [
             [
                 "205f206330e157cd"
@@ -955,8 +1015,8 @@
         "links": [
             "ce640c5bf9b1db2a"
         ],
-        "x": 1965,
-        "y": 260,
+        "x": 1945,
+        "y": 240,
         "wires": [
             [
                 "51abfa946bf3b061"
@@ -986,7 +1046,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1210,
-        "y": 240,
+        "y": 220,
         "wires": [
             [
                 "a183be751db679be"
@@ -1023,7 +1083,7 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 240,
+        "y": 220,
         "wires": [
             [
                 "5d74c68f90b3b938"
@@ -1040,7 +1100,7 @@
             "b264c9414d75c3c4"
         ],
         "x": 975,
-        "y": 280,
+        "y": 260,
         "wires": []
     },
     {
@@ -1497,57 +1557,140 @@
         ]
     },
     {
-        "id": "3e94f4872ebac307",
-        "type": "mqtt-broker",
+        "id": "c446dccaa320db66",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
         "name": "",
-        "broker": "ws://mosquitto:8081/mqtt",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
+        "topic": "esp8266/temp",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "faa22b72fed98f13",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 1220,
+        "wires": [
+            [
+                "4d3ac9acbb299e0a"
+            ]
+        ]
     },
     {
-        "id": "faa22b72fed98f13",
-        "type": "mqtt-broker",
+        "id": "4d3ac9acbb299e0a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "4e4de2c79e25e47e",
+        "type": "mqtt out",
+        "z": "667217b87d157241",
         "name": "",
-        "broker": "mosquitto",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
+        "topic": "tende",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
         "userProps": "",
-        "sessionExpiry": ""
+        "correl": "",
+        "expiry": "",
+        "broker": "faa22b72fed98f13",
+        "x": 750,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "85a4df23141c3da0",
+        "type": "buffer-maker",
+        "z": "667217b87d157241",
+        "name": "",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "name": "item1",
+                "type": "uint8",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload"
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "x": 590,
+        "y": 140,
+        "wires": [
+            [
+                "4e4de2c79e25e47e"
+            ]
+        ]
+    },
+    {
+        "id": "28794d95172e4ca2",
+        "type": "http in",
+        "z": "667217b87d157241",
+        "name": "",
+        "url": "/api/tende",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "aaf45f133a0a25bf",
+                "b23ac77db5e27e01"
+            ]
+        ]
+    },
+    {
+        "id": "aaf45f133a0a25bf",
+        "type": "http response",
+        "z": "667217b87d157241",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "x": 410,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b23ac77db5e27e01",
+        "type": "function",
+        "z": "667217b87d157241",
+        "name": "function 1",
+        "func": "const id = msg.payload.id.trim().toLowerCase();\nconst action = msg.payload.action.trim().toLowerCase();\nlet result = null;\n\nswitch (action) {\n    case \"down\":\n        result = 0;\n        break;\n    case \"stop\":\n        result = 1;\n        break;\n    case \"up\":\n        result = 2;\n        break;\n}\n\nswitch (id) {\n    case \"kitchen\":\n        break;\n    case \"livingroom\":\n        result += 3;\n        break;\n    default:\n        result = null;\n}\n\nmsg.payload = result === null ? 1 : result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "85a4df23141c3da0"
+            ]
+        ]
     }
 ]
