@@ -1557,43 +1557,6 @@
         ]
     },
     {
-        "id": "c446dccaa320db66",
-        "type": "mqtt in",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "topic": "esp8266/temp",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "faa22b72fed98f13",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 230,
-        "y": 1220,
-        "wires": [
-            [
-                "4d3ac9acbb299e0a"
-            ]
-        ]
-    },
-    {
-        "id": "4d3ac9acbb299e0a",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "4e4de2c79e25e47e",
         "type": "mqtt out",
         "z": "667217b87d157241",
