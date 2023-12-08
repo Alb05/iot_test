@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   mosquitto:
     image: ${DOCKER_REGISTRY-}mosquitto
