@@ -1,5 +1,16 @@
 #!/bin/bash
 
+Help () {
+    echo
+    echo "Syntax: imagemanager [option] [path] [user]"
+    echo
+    echo "options:"
+    echo "    pull       Pulls the latest version from repo and starts it"
+    echo "    remove     Removes all associated containers, images, volumes"
+    echo "    restart    Remove + Pull"
+    echo
+}
+
 if [[ ! -n $1 ]] || [[ ! -n $2 ]] || [[ ! -n $3 ]];
 then
     Help
@@ -27,13 +38,6 @@ case $1 in
         docker volume rm iot_test_mosquitto_config > /dev/null
         exit;;
     *)
-        echo
-        echo "Syntax: imagemanager [option] [path] [user]"
-        echo
-        echo "options:"
-        echo "    pull       Pulls the latest version from repo and starts it"
-        echo "    remove     Removes all associated containers, images, volumes"
-        echo "    restart    Remove + Pull"
-        echo
+        Help
         exit;;
 esac
